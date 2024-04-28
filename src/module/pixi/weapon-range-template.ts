@@ -64,7 +64,7 @@ export class WeaponRangeTemplate extends MeasuredTemplate {
         return null;
     }
 
-    const scale = hex && shape == "cone" ? Math.sqrt(3) / 2 : 1.1;
+    const scale = hex && type == RangeType.Cone ? Math.sqrt(3) / 2 : 1.1;
     const templateData = {
       t: shape,
       user: game.user!.id,

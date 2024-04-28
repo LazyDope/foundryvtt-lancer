@@ -64,16 +64,16 @@ export class WeaponRangeTemplate extends MeasuredTemplate {
         return null;
     }
 
-    const scale = hex && shape == "cone" ? Math.sqrt(3) / 2 : 1;
+    const scale = hex && shape == "cone" ? Math.sqrt(3) / 2 : 1.1;
     const templateData = {
       t: shape,
       user: game.user!.id,
-      distance: (dist + 0.1) * scale * grid_distance,
+      distance: dist * scale * grid_distance,
       width: scale * grid_distance,
       direction: 0,
       x: 0,
       y: 0,
-      angle: 60,
+      angle: 61,
       fillColor: game.user!.color,
       flags: {
         [game.system.id]: {
